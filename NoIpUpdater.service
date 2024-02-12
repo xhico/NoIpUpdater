@@ -1,0 +1,13 @@
+[Unit]
+Description=NoIpUpdater Service
+After=network.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/NoIpUpdater/
+ExecStart=/usr/bin/python3 /home/pi/NoIpUpdater/NoIpUpdater.py
+Restart=on-failure
+EnvironmentFile=/etc/environment
+
+[Install]
+WantedBy=multi-user.target

@@ -37,7 +37,7 @@ def main():
     if actionBtn.text == "Confirm":
         actionBtn.click()
         logger.info("actionBtn CLICK")
-        sendEmail(os.path.basename(__file__), "NoIp Updated")
+        sendEmail("NO-IP Updated", "NO-IP Updated")
     else:
         logger.info("actionBtn NOT Confirm")
 
